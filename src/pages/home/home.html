@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+      <button ion-button block clear (click)="logOut()">Log out</button>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let country of countryRef | async">
+      <h2> {{ country.name }} </h2>
+      <h3> text: <strong>{{ country.text }}</strong> </h3>
+    </ion-item>
+  </ion-list>
+</ion-content>
