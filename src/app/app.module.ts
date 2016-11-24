@@ -6,7 +6,8 @@ import { LoginPage } from '../pages/login/login';
 import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 import { SignupPage } from '../pages/signup/signup';
 import { AppSettings } from './perso'
-
+import { TabsPage } from '../pages/tabs/tabs'
+import { MapPage } from '../pages/map/map'
 // Importing provider
 import { AuthData } from '../providers/auth-data';
 
@@ -33,7 +34,9 @@ const myFirebaseAuthConfig = {
     HomePage,
     LoginPage,
     ResetPasswordPage,
-    SignupPage
+    SignupPage,
+    TabsPage,
+    MapPage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -45,7 +48,9 @@ const myFirebaseAuthConfig = {
     HomePage,
     LoginPage,
     ResetPasswordPage,
-    SignupPage
+    SignupPage,
+    TabsPage,
+    MapPage
   ],
   providers: [
     AuthData

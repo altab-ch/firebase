@@ -5,6 +5,7 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 import { HomePage } from '../pages/home/home';
 import { AngularFire } from 'angularfire2';
 import { LoginPage } from '../pages/login/login';
+import { TabsPage } from '../pages/tabs/tabs'
 
 @Component({
   template: `<ion-nav [root]="rootPage"></ion-nav>`
@@ -15,7 +16,7 @@ export class MyApp {
   constructor(platform: Platform, public af: AngularFire) {
     af.auth.subscribe(user => {
       if (user) {
-        this.rootPage = HomePage;
+        this.rootPage = TabsPage;
       } else {
         this.rootPage = LoginPage;
       }
