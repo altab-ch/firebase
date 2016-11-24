@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
-import { HomePage } from '../pages/home/home';
 import { AngularFire } from 'angularfire2';
 import { LoginPage } from '../pages/login/login';
 import { TabsPage } from '../pages/tabs/tabs'

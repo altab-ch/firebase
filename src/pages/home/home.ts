@@ -14,10 +14,19 @@ export class HomePage {
   loadedCountryList: any;
 
   constructor(public authData: AuthData, public navCtrl: NavController, public af: AngularFire) {
-    this.countryRef = af.database.list('/messages');
+    this.countryRef = firebase.database().ref('/messages');//af.database.list('/messages');
+    this.countryRef.on('value', countryList => {
+      let countries = [];
+      countryList.forEach(country => {
+        countries.push(country.val());
+      });
+
+      this.countryList = countries;
+      this.loadedCountryList = countries;
+    });
   }
 
-  logOut () {
+  logOut() {
     this.authData.logoutUser();
   }
 
@@ -27,7 +36,7 @@ export class HomePage {
 
   getItems(searchbar) {
     // Reset items back to all of the items
-    /*this.initializeItems();
+    this.initializeItems();
 
     // set q to the value of the searchbar
     var q = searchbar.srcElement.value;
@@ -47,7 +56,7 @@ export class HomePage {
     });
 
     console.log(q, this.countryList.length);
-*/
+
   }
 
 }
