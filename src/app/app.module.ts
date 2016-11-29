@@ -5,9 +5,12 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 import { SignupPage } from '../pages/signup/signup';
-import { AppSettings } from './perso'
-import { TabsPage } from '../pages/tabs/tabs'
-import { MapPage } from '../pages/map/map'
+import { AppSettings } from './perso';
+import { TabsPage } from '../pages/tabs/tabs';
+import { MapPage } from '../pages/map/map';
+import { ProfilPage } from '../pages/profil/profil';
+import { CameraPage } from '../pages/camera/camera';
+
 // Importing provider
 import { AuthData } from '../providers/auth-data';
 
@@ -36,7 +39,9 @@ const myFirebaseAuthConfig = {
     ResetPasswordPage,
     SignupPage,
     TabsPage,
-    MapPage
+    MapPage,
+    ProfilPage,
+    CameraPage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -50,7 +55,9 @@ const myFirebaseAuthConfig = {
     ResetPasswordPage,
     SignupPage,
     TabsPage,
-    MapPage
+    MapPage,
+    ProfilPage,
+    CameraPage
   ],
   providers: [
     AuthData
